@@ -1,21 +1,30 @@
 import React, {useState} from 'react';
-import RADIO from '../../assets/radio.png';
+import RADIO_DEFAULT_IMG from '../../assets/radio.png';
+import styles from './style.module.css';
+import { StationModel } from '../../models';
 
-export const Radio = ({}): JSX.Element => {
+interface RadioProps {
+    item: StationModel,
+    isSelected: boolean,
+    handleSelection: (id: any) => void
+}
+
+export const Radio = ({ item, isSelected, handleSelection }: RadioProps): JSX.Element => {
+  // const {}
   return (
     <li onClick={() => {
-      // setFlag(!flag);
-      // console.log("flag", flag)
-    }}>
-        <h3>
-            <span>Putin FM</span>
-            <strong>66,6</strong>
+        handleSelection(item)
+    }}
+    className={styles.listItem}>
+        <h3 className={styles.listItemTitle}>
+            <span>{item.name}</span>
+            <strong>{item.count}</strong>
         </h3>
 
-        {<div className="answer active" onClick={(e) => e.stopPropagation()}>
-            <div className="plus"></div>
-            <img src={RADIO} alt=""/>
-            <div className="minus"></div>
+        {isSelected && <div className={styles.answer} onClick={(e) => e.stopPropagation()}>
+            <div className={styles.plus}></div>
+            <img src={item.imageUrl ? item.imageUrl : RADIO_DEFAULT_IMG} alt=""/>
+            <div className={styles.minus}></div>
         </div>}
     </li>
   )

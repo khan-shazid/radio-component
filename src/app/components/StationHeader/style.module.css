@@ -1,0 +1,23 @@
+.stationHeader {
+    display: flex;
+    width: 100%;
+    background: #EDAD61;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+    border-radius: 28px 28px 0 0;
+}
+
+.back {
+    composes: stationLogo from "../Station/style.module.css";
+    background: url("../../assets/back-arrow.png") no-repeat center;
+}
+
+.signOut {
+    composes: stationLogo from "../Station/style.module.css";
+    background: url("../../assets/switch.png") no-repeat center;
+}

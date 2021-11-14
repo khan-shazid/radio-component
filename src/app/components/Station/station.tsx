@@ -1,45 +1,45 @@
 import React, {useState} from 'react';
-import './style.css';
+
+import styles from './style.module.css';
 
 import RADIO from '../../assets/radio.png';
-// import { TodoActions } from 'app/actions/todos';
 import { Radio } from '../Radio/radio';
-// import { TodoModel } from 'app/models/TodoModel';
+import Header from '../StationHeader/station-header';
+import Footer from '../StationFooter/station-footer';
+import { StationModel } from '../../models';
 
-// export namespace RadioContainer {
-  // export interface Props {
-    // todos: TodoModel[];
-    // actions: TodoActions;
-//   }
-// }
-
-const handlePlusClick = (e: any) => {
-  // e.stopPropagation();
-  console.log("handlePlusClick called")
+interface StationProps {
+    stations: StationModel[]
 }
 
-export const Station = (): JSX.Element => {
-  const [flag, setFlag] = useState(false);
+const Station = ({ stations }: StationProps): JSX.Element => {
+    const [flag, setFlag] = useState<boolean>(false);
 
-  return (
-      <div className="station-container">
+    const [selectedStation, setSelectedStation] = useState<StationModel | undefined>(undefined);
 
-          <header className="station-header">
-              <div className="back"></div>
-              <div className="title">STATIONS</div>
-              <div className="sign-out"></div>
-          </header>
+    const handleSelection = (station: StationModel) => {
+      setSelectedStation(station);
+    }
 
-          <ul className="accordion-list">
+    return (
+        <div className={styles.stationContainer}>
 
-              <Radio />
+            <Header/>
 
-          </ul>
+            <ul className={styles.accordionList}>
+            {
+                stations.map((station) => {
+                    return (<Radio item={station} isSelected={selectedStation?.id === station.id} handleSelection={handleSelection} key={station.id}/>)
+                })
+            }
+            </ul>
 
-          <div className="footer">
-              <img src={require('../../assets/dribble-logo.png')} alt=""/>
-          </div>
+            <Footer name={selectedStation?.name}/>
 
-      </div>
-  );
+        </div>
+    );
 };
+
+export default Station;
+
+// export default CSSModules(Station, styles, {allowMultiple: true} )

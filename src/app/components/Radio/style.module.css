@@ -1,0 +1,68 @@
+.listItem {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 20px 0px;
+    margin: 0;
+    cursor: pointer;
+    color: #A2ABBD;
+    border-bottom: 1px solid #464646;
+    line-height: 1;
+}
+.listItem:last-child {
+    border-bottom: 0;
+}
+.active {
+    transform: rotate(45deg);
+}
+.listItemTitle {
+    font-weight: normal;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0 0 0 0;
+    margin: 0;
+    font-size: 15px;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+    color: #A2ABBD;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.listItemTitle strong {
+    font-weight: bold;
+    font-size: 24px;
+}
+.answer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+}
+.answer p {
+    position: relative;
+    display: block;
+    font-weight: 300;
+    padding: 10px 0 0 0;
+    cursor: pointer;
+    line-height: 150%;
+    margin: 0 0 15px 0;
+    font-size: 14px;
+}
+
+.plus {
+    composes: stationLogo from "../Station/style.module.css";
+    background: url("../../assets/plus.png") no-repeat center;
+}
+.minus  {
+    composes: stationLogo from "../Station/style.module.css";
+    background: url("../../assets/minus.png") no-repeat center;
+}

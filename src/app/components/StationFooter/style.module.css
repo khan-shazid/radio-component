@@ -1,0 +1,18 @@
+.footer {
+    background: #22222C;
+    text-align: center;
+    padding: 36px;
+    border-radius: 0 0 28px 28px;
+    border-top: 1px solid #464646;
+}
+
+.footer label {
+    font-size: 12px;
+    color: #EDAD61;
+    font-weight: 600;
+}
+
+.footer h2 {
+    color: #A2ABBD;
+    font-weight: 400;
+}
