@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
-import RADIO_DEFAULT_IMG from '../../assets/radio.png';
+
 import styles from './style.module.css';
+
+import { formatwithComma } from '../../utils';
+import RADIO_DEFAULT_IMG from '../../assets/radio.png';
 import { StationModel } from '../../models';
 
 interface RadioProps {
@@ -10,7 +13,6 @@ interface RadioProps {
 }
 
 export const Radio = ({ item, isSelected, handleSelection }: RadioProps): JSX.Element => {
-  // const {}
   return (
     <li onClick={() => {
         handleSelection(item)
@@ -18,7 +20,7 @@ export const Radio = ({ item, isSelected, handleSelection }: RadioProps): JSX.El
     className={styles.listItem}>
         <h3 className={styles.listItemTitle}>
             <span>{item.name}</span>
-            <strong>{item.count}</strong>
+            <strong>{formatwithComma(item.count)}</strong>
         </h3>
 
         {isSelected && <div className={styles.answer} onClick={(e) => e.stopPropagation()}>
