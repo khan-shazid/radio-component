@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<header
+  className="stationHeader"
+  data-testid="header"
+>
+  <div
+    className="back"
+  />
+  <div
+    className="title"
+  >
+    STATIONS
+  </div>
+  <div
+    className="signOut"
+  />
+</header>
+`;

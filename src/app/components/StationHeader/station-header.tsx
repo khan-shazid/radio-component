@@ -3,7 +3,7 @@ import styles from './style.module.css';
 
 const StationHeader = ({}): JSX.Element => {
   return (
-      <header className={styles.stationHeader}>
+      <header data-testid="header" className={styles.stationHeader}>
           <div className={styles.back}></div>
           <div className={styles.title}>STATIONS</div>
           <div className={styles.signOut}></div>
