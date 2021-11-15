@@ -18,14 +18,12 @@ const Station = ({ stations }: StationProps): JSX.Element => {
     const [selectedStation, setSelectedStation] = useState<StationModel | undefined>(undefined);
 
     const handleSelection = (station: StationModel) => {
-      setSelectedStation(station);
+        setSelectedStation(station);
     }
 
     return (
         <div className={styles.stationContainer}>
-
             <Header/>
-
             <ul className={styles.accordionList}>
             {
                 stations.map((station) => {
@@ -33,9 +31,7 @@ const Station = ({ stations }: StationProps): JSX.Element => {
                 })
             }
             </ul>
-
             <Footer name={selectedStation?.name}/>
-
         </div>
     );
 };

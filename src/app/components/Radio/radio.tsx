@@ -14,19 +14,21 @@ interface RadioProps {
 
 export const Radio = ({ item, isSelected, handleSelection }: RadioProps): JSX.Element => {
   return (
-    <li onClick={() => {
-        handleSelection(item)
-    }}
-    className={styles.listItem}>
+    <li
+      data-testid="radio"
+      onClick={() => {
+          handleSelection(item)
+      }}
+      className={styles.listItem}>
         <h3 className={styles.listItemTitle}>
-            <span>{item.name}</span>
-            <strong>{formatwithComma(item.count)}</strong>
+            <span data-testid="radio-title-name">{item.name}</span>
+            <strong data-testid="radio-title-count">{formatwithComma(item.count)}</strong>
         </h3>
 
-        {isSelected && <div className={styles.answer} onClick={(e) => e.stopPropagation()}>
-            <div className={styles.plus}></div>
+        {isSelected && <div data-testid="radio-selected" className={styles.answer} onClick={(e) => e.stopPropagation()}>
+            <div className={styles.plus} onClick={() => console.log("plus clicked")}></div>
             <img src={item.imageUrl ? item.imageUrl : RADIO_DEFAULT_IMG} alt=""/>
-            <div className={styles.minus}></div>
+            <div className={styles.minus} onClick={() => console.log("minus clicked")}></div>
         </div>}
     </li>
   )

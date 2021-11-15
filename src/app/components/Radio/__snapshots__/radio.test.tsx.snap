@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches with snapshot with selection 1`] = `
+<li
+  className="listItem"
+  data-testid="radio"
+  onClick={[Function]}
+>
+  <h3
+    className="listItemTitle"
+  >
+    <span
+      data-testid="radio-title-name"
+    >
+      Putin FM
+    </span>
+    <strong
+      data-testid="radio-title-count"
+    >
+      66,6
+    </strong>
+  </h3>
+  <div
+    className="answer"
+    data-testid="radio-selected"
+    onClick={[Function]}
+  >
+    <div
+      className="plus"
+      onClick={[Function]}
+    />
+    <img
+      alt=""
+      src="radio.png"
+    />
+    <div
+      className="minus"
+      onClick={[Function]}
+    />
+  </div>
+</li>
+`;
+
+exports[`matches with snapshot without selection 1`] = `
+<li
+  className="listItem"
+  data-testid="radio"
+  onClick={[Function]}
+>
+  <h3
+    className="listItemTitle"
+  >
+    <span
+      data-testid="radio-title-name"
+    >
+      Putin FM
+    </span>
+    <strong
+      data-testid="radio-title-count"
+    >
+      66,6
+    </strong>
+  </h3>
+</li>
+`;

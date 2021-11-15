@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches with snapshot 1`] = `
+<div
+  className="stationContainer"
+>
+  <header
+    className="stationHeader"
+    data-testid="header"
+  >
+    <div
+      className="back"
+    />
+    <div
+      className="title"
+    >
+      STATIONS
+    </div>
+    <div
+      className="signOut"
+    />
+  </header>
+  <ul
+    className="accordionList"
+  >
+    <li
+      className="listItem"
+      data-testid="radio"
+      onClick={[Function]}
+    >
+      <h3
+        className="listItemTitle"
+      >
+        <span
+          data-testid="radio-title-name"
+        >
+          Putin FM
+        </span>
+        <strong
+          data-testid="radio-title-count"
+        >
+          66,6
+        </strong>
+      </h3>
+    </li>
+    <li
+      className="listItem"
+      data-testid="radio"
+      onClick={[Function]}
+    >
+      <h3
+        className="listItemTitle"
+      >
+        <span
+          data-testid="radio-title-name"
+        >
+          Dribble FM
+        </span>
+        <strong
+          data-testid="radio-title-count"
+        >
+          101,2
+        </strong>
+      </h3>
+    </li>
+    <li
+      className="listItem"
+      data-testid="radio"
+      onClick={[Function]}
+    >
+      <h3
+        className="listItemTitle"
+      >
+        <span
+          data-testid="radio-title-name"
+        >
+          Doge FM
+        </span>
+        <strong
+          data-testid="radio-title-count"
+        >
+          99,4
+        </strong>
+      </h3>
+    </li>
+    <li
+      className="listItem"
+      data-testid="radio"
+      onClick={[Function]}
+    >
+      <h3
+        className="listItemTitle"
+      >
+        <span
+          data-testid="radio-title-name"
+        >
+          Ballads FM
+        </span>
+        <strong
+          data-testid="radio-title-count"
+        >
+          87,1
+        </strong>
+      </h3>
+    </li>
+    <li
+      className="listItem"
+      data-testid="radio"
+      onClick={[Function]}
+    >
+      <h3
+        className="listItemTitle"
+      >
+        <span
+          data-testid="radio-title-name"
+        >
+          Maximum FM
+        </span>
+        <strong
+          data-testid="radio-title-count"
+        >
+          172,2
+        </strong>
+      </h3>
+    </li>
+  </ul>
+  <div
+    className="footer"
+  >
+    <label
+      data-testid="footer-static"
+    >
+      NOW PLAYING
+    </label>
+    <h2
+      data-testid="footer-props"
+    />
+  </div>
+</div>
+`;

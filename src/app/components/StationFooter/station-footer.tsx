@@ -8,8 +8,8 @@ interface StationFooterProps {
 const StationFooter = ({name}: StationFooterProps): JSX.Element => {
   return (
     <div className={styles.footer}>
-        <label>NOW PLAYING</label>
-        <h2>{name}</h2>
+        <label data-testid="footer-static">NOW PLAYING</label>
+        <h2 data-testid="footer-props">{name}</h2>
     </div>
   )
 }
