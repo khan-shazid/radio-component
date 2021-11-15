@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
 
 import styles from './style.module.css';
-
-import RADIO from '../../assets/radio.png';
 import { Radio } from '../Radio/radio';
 import Header from '../StationHeader/station-header';
 import Footer from '../StationFooter/station-footer';
@@ -37,5 +35,3 @@ const Station = ({ stations }: StationProps): JSX.Element => {
 };
 
 export default Station;
-
-// export default CSSModules(Station, styles, {allowMultiple: true} )

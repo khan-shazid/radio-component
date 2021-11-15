@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 
 import styles from './style.module.css';
-
 import { formatwithComma } from '../../utils';
 import RADIO_DEFAULT_IMG from '../../assets/radio.png';
 import { StationModel } from '../../models';
