@@ -1,20 +1,15 @@
 import React, { useState } from 'react';
+import { useForm } from './useForm';
 
 export default function useStateTutorial() {
-    const [{ count, count2 }, setCount] = useState({count: 10, count2: 20});
+    const [values, handleChange] = useForm({email: '', password: ''});
 
     return (
       <div>
-        <button onClick={() => setCount(currentState => ({
-          ...currentState,
-          count: currentState.count + 1
-        }))}>+</button>
-        <button onClick={() => setCount(currentState => ({
-          ...currentState,
-          count2: currentState.count2 + 1
-        }))}>+</button>
-        <div>Count {count}</div>
-        <div>Count {count2}</div>
+        <form>
+          <input name="email" value={values.email} onChange={handleChange}/>
+          <input type="password" name="password" value={values.password} onChange={handleChange}/>
+        </form>
       </div>
     )
 }

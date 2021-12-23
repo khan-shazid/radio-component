@@ -3,6 +3,7 @@ import Station from './components/Station/station';
 import { SAMPLE_DATA } from './constants';
 
 import UseStateTutorial from './usestate-tutorial';
+import UseEffectTutorial from './useeffect-tutorial';
 
 // function App() {
 //   return (
@@ -15,7 +16,7 @@ import UseStateTutorial from './usestate-tutorial';
 function App() {
   return (
     <div className="App">
-        <UseStateTutorial/>
+        <UseEffectTutorial/>
     </div>
   );
 }
